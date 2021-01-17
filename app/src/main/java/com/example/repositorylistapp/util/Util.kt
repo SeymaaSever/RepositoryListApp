@@ -1,4 +1,4 @@
-package com.example.repositorylistapp
+package com.example.repositorylistapp.util
 
 import android.view.View
 import android.widget.ImageView

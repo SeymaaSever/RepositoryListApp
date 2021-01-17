@@ -12,7 +12,7 @@ data class UserRepoModel (
     var uuid: Int = 0,
 
     @ColumnInfo
-    @SerializedName("id")val productId: String?,
+    @SerializedName("id")val id: String?,
     @ColumnInfo
     @SerializedName("owner") var owner: OwnerModel?,
     @ColumnInfo
@@ -24,5 +24,8 @@ data class UserRepoModel (
     @ColumnInfo
     @SerializedName("stargazers_count")val startCount: Int?,
     @ColumnInfo
-    @SerializedName("description")val description: String?
-) : Serializable
+    @SerializedName("description")val description: String?,
+    @ColumnInfo
+    val isFavourite: Boolean?
+
+    ) : Serializable
