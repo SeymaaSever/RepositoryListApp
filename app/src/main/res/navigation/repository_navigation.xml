@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/repository_navigation"
+    app:startDestination="@id/userRepoListFragment">
+
+    <fragment
+        android:id="@+id/userRepoListFragment"
+        android:name="com.example.repositorylistapp.ui.user_repos.UserRepoListFragment"
+        android:label="UserRepoListFragment" >
+        <action
+            android:id="@+id/action_userRepoListFragment_to_userRepoDetailFragment"
+            app:destination="@id/userRepoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userRepoDetailFragment"
+        android:name="com.example.repositorylistapp.ui.repo_detail.UserRepoDetailFragment"
+        android:label="UserRepoDetailFragment" >
+        <action
+            android:id="@+id/action_userRepoDetailFragment_to_userRepoListFragment"
+            app:destination="@id/userRepoListFragment" />
+        <argument
+            android:name="repository"
+            app:argType="com.example.repositorylistapp.model.UserRepoModel"
+            app:nullable="true" />
+    </fragment>
+</navigation>
