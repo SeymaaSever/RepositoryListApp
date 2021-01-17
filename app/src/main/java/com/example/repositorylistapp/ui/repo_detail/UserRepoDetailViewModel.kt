@@ -17,12 +17,14 @@ class UserRepoDetailViewModel : ViewModel() {
     var descriptionObservable = ObservableField<String>()
     var starCountObservable = ObservableField<String>()
     var issueCountObservable = ObservableField<String>()
+    var homePageObservable = ObservableField<String>()
 
     fun handleRepositoryDetail(response: UserRepoModel?) {
         response?.run {
             userImageUrlObservable.set(response.owner?.url)
-            ownerNameObservable.set(name)
-            descriptionObservable.set(description)
+            ownerNameObservable.set("Repository Name: $name")
+            descriptionObservable.set("Description: $description")
+            homePageObservable.set("Home Page: $homepage")
             startCount?.let { starCountObservable.set("Stars:$it") }
             issueCount?.let { issueCountObservable.set("Open Issues:$it") }
         }

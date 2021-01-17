@@ -26,6 +26,8 @@ data class UserRepoModel (
     @ColumnInfo
     @SerializedName("description")val description: String?,
     @ColumnInfo
+    @SerializedName("homepage")val homepage: String?,
+    @ColumnInfo
     val isFavourite: Boolean?
 
     ) : Serializable

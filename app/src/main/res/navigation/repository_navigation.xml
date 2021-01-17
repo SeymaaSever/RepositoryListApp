@@ -6,7 +6,7 @@
     <fragment
         android:id="@+id/userRepoListFragment"
         android:name="com.example.repositorylistapp.ui.user_repos.UserRepoListFragment"
-        android:label="UserRepoListFragment" >
+        android:label="Repository List">
         <action
             android:id="@+id/action_userRepoListFragment_to_userRepoDetailFragment"
             app:destination="@id/userRepoDetailFragment" />
@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/userRepoDetailFragment"
         android:name="com.example.repositorylistapp.ui.repo_detail.UserRepoDetailFragment"
-        android:label="UserRepoDetailFragment" >
+        android:label="Repository Detail">
         <action
             android:id="@+id/action_userRepoDetailFragment_to_userRepoListFragment"
             app:destination="@id/userRepoListFragment" />

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.repositorylistapp.model.UserRepoModel
 
-@Database(entities = arrayOf(UserRepoModel::class),version = 2 )
+@Database(entities = arrayOf(UserRepoModel::class),version = 3 )
 @TypeConverters(Converters::class)
 abstract class RepositoryDatabase : RoomDatabase(){
     abstract fun repositoryDao() : RepositoryDao

@@ -13,6 +13,7 @@ import com.example.repositorylistapp.R
 import com.example.repositorylistapp.databinding.FragmentUserRepoListBinding
 import com.example.repositorylistapp.model.UserRepoModel
 import com.example.repositorylistapp.ui.user_repos.adapter.RepoListAdapter
+import com.example.repositorylistapp.util.hideKeyboard
 
 class UserRepoListFragment : Fragment() {
     private lateinit var viewModel: UserRepoListViewModel
@@ -21,6 +22,7 @@ class UserRepoListFragment : Fragment() {
     private val repoListAdapter = RepoListAdapter(arrayListOf())
     private val repoListLiveDataObservers = Observer<List<UserRepoModel>> { list ->
         list?.let {
+            view?.hideKeyboard()
             repoListAdapter.submitList(ArrayList(list))
         }
     }
