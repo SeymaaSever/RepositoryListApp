@@ -1,13 +1,15 @@
 package com.example.repositorylistapp.ui.repo_detail
 
+import android.app.Application
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt
 import androidx.lifecycle.ViewModel
+import com.example.repositorylistapp.base.BaseViewModel
 import com.example.repositorylistapp.model.UserRepoModel
 import com.example.repositorylistapp.service.RepoApiService
 import io.reactivex.disposables.CompositeDisposable
 
-class UserRepoDetailViewModel : ViewModel() {
+class UserRepoDetailViewModel(application: Application) : BaseViewModel(application) {
     private var disposable = CompositeDisposable()
     private var apiService = RepoApiService()
 
