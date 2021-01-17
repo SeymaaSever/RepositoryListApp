@@ -14,4 +14,4 @@ Technologies used are:
 
 
 # Android architecture componenets:
-Since Google I/O 2017 the new Android architecture components where introduced. You can find a first use of it for holding the ViewModel instead of the ObjectHerder on the feature branch architecture_componenets
+Since Google I/O 2017 the new Android architecture components where introduced.
